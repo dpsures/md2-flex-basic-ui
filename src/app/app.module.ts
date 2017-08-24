@@ -8,11 +8,13 @@ import "hammerjs";
 
 import { AppComponent } from './app.component';
 import { AppDashboardComponent } from './app-dashboard/app-dashboard.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppDashboardComponent
+    AppDashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,MaterialModule,BrowserAnimationsModule,FlexLayoutModule,AppRoutingModule

@@ -1,0 +1,13 @@
+.login-card {
+    width: 430px;
+    margin-top: 200px;
+    height: 220px;
+}
+
+.login-card-xs {
+    margin-left: 20px;
+    width: 400px;
+    margin-top: 50px;
+    height: 220px;
+    margin-bottom: 10px;
+}

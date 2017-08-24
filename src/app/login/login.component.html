@@ -1,0 +1,26 @@
+<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fx>
+  <form>
+    <md-card class="login-card" class.xs="login-card-xs">
+      <md-card-header>
+        <md-card-title>Login</md-card-title>
+        <md-card-subtitle>Pet's Shop - Application Login</md-card-subtitle>
+      </md-card-header>
+      <md-card-content>
+        <div fxLayout="row" fxLayout.xs="column">
+          <md-input-container fxFlex>
+            <input mdInput placeholder="User Name">
+          </md-input-container>
+        </div>
+
+        <div fxLayout="row" fxLayout.xs="column">
+          <md-input-container fxFlex>
+            <input mdInput placeholder="Password">
+          </md-input-container>
+        </div>
+      </md-card-content>
+      <md-card-actions>
+        <a md-raised-button routerLink='/dashboard' color="warn" style="float: right;">Login</a>
+      </md-card-actions>
+    </md-card>
+  </form>
+</div>
