@@ -1,0 +1,58 @@
+<div fxLayout="row">
+  <md-toolbar color="primary">
+    <md-icon class="md-18" style="margin-right: 10px;">local_florist</md-icon>
+
+    <span [routerLink]="['/dashboard']">Pet's Dashboard - v1.0</span>
+
+    <span fxFlex></span>
+
+    <button md-icon-button [md-menu-trigger-for]="menu">
+        <md-icon>more_vert</md-icon>
+      </button>
+  </md-toolbar>
+  <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item [routerLink]="['/settings']">Settings</button>
+    <button md-menu-item>About</button>
+  </md-menu>
+</div>
+
+<div fxLayoutGap="10px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+
+  <md-card fxFlex="80" class="card-1">
+    <md-card-content>
+      <form>
+        <md-input-container fxFlex="30" style="margin-right: 15px;">
+          <input mdInput placeholder="First name">
+        </md-input-container>
+        <md-input-container fxFlex="30" style="margin-right: 15px;">
+          <input mdInput placeholder="Last name">
+        </md-input-container>
+        <md-input-container fxFlex="40">
+          <input mdInput placeholder="Email">
+        </md-input-container>
+      </form>
+    </md-card-content>
+  </md-card>
+
+  <md-card fxFlex="20" class="card-2">
+    <md-card-content>
+      <div mdLine style="margin-bottom: 10px;">
+        <span style="margin-right: 10px;">System Property</span>
+        <md-slide-toggle [checked]="checked" mdLine>
+        </md-slide-toggle>
+      </div>
+
+      <div mdLine style="margin-bottom: 10px;">
+        <span style="margin-right: 10px;">Temp Storage</span>
+        <md-slide-toggle [checked]="checked" mdLine>
+        </md-slide-toggle>
+      </div>
+
+      <div mdLine>
+        <span style="margin-right: 10px;">Allow user access</span>
+        <md-slide-toggle [checked]="unchecked" mdLine>
+        </md-slide-toggle>
+      </div>
+    </md-card-content>
+  </md-card>
+</div>

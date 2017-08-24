@@ -9,12 +9,14 @@ import "hammerjs";
 import { AppComponent } from './app.component';
 import { AppDashboardComponent } from './app-dashboard/app-dashboard.component';
 import { LoginComponent } from './login/login.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppDashboardComponent,
-    LoginComponent
+    LoginComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,MaterialModule,BrowserAnimationsModule,FlexLayoutModule,AppRoutingModule
