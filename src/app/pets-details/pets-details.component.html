@@ -1,0 +1,64 @@
+<div fxLayout="row">
+  <md-toolbar color="primary">
+    <md-icon class="md-18" style="margin-right: 10px;">local_florist</md-icon>
+
+    <span [routerLink]="['/dashboard']">Pet's Dashboard - v1.0</span>
+
+    <span fxFlex></span>
+
+    <button md-icon-button [md-menu-trigger-for]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-toolbar>
+  <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item [routerLink]="['/settings']">Settings</button>
+    <button md-menu-item [routerLink]="['/details']">Pets List</button>
+    <button md-menu-item>About</button>
+  </md-menu>
+</div>
+
+<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutGap.xs="10px">
+  
+    <md-card class="example-card" fxFlex>
+      <md-card-header>
+        Friends Details
+      </md-card-header>
+      <md-card-content>
+          <div>
+              <table [md2Data]="data | dataPipe : search" #md2="md2DataTable" [rowsPerPage]="10">
+                <thead>
+                  <tr>
+                    <td colspan="4">
+                        <md-input-container>
+                            <input mdInput placeholder="Search" [(ngModel)]="search">
+                          </md-input-container>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th md2SortBy="name">Name</th>
+                    <th md2SortBy="email">Email</th>
+                    <th md2SortBy="age">Age</th>
+                    <th md2SortBy="city">City</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of md2.data">
+                    <td>{{i.name}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.age}}</td>
+                    <td>{{i.city}}</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="4">
+                      <md2-pagination [rowsPerPageSet]="[5,10,15]" paginationLabel="Rows per page"></md2-pagination>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+      </md-card-content>
+    </md-card>
+
+</div>
